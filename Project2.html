@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Project1.2</title>
+    </head>
+    <script>
+        function jump_to_link(weblist) {
+            var url_number=weblist.selectedIndex;
+            location=weblist.options[url_number].value;
+        }
+    </script>
+
+<body>
+    <h2>Favorite Sites on the Web</h2>
+    <p>These are my favorite websites:</p>
+    <form name="glinks">
+        <table cellpadding="5">
+            <tr>
+                <td>My Favorite Websites</td>
+                <td>
+                    <select name="leg" onchange="jump_to_link(this);">
+                        <option value="javascript:lovation.reload()">Select a Web Page on the favorites</option>
+                        <option value="https://www.rateyourmusic.com">RateYourMusic: New Music Cataloguing Website</option>
+                        <option value="https://www.letterboxd.com">Letterboxd: Movie Cataloguing </option>
+                        <option value="https://www.youtube.com">YouTube: Video Sharing Platform</option>
+                        <option value="https://www.tetris.com">Tetris: Puzzle Video Game</option>
+                        <option value="https://www.genius.com">Genius: Lyric Annotation Website</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Project1.c</title>
+        <style type="text/css">
+            body {background: powderblue;}
+            h1   {color: red;}
+        </style>
+        <script>
+            function XmasDays(CurrentDay) {
+                var XYear=CurrentDay.getFullYear();
+                var XDay = new Date("July,04,2023");
+                XDay.setFullYear(XYear);
+                var DayCount = (XDay-CurrentDay)/(1000*60*60*24);
+                DayCount=Math.round(DayCount);
+                return DayCount;
+            }
+            function MonthTxt (MonthNumber) {
+                var Month=new Array();
+                Month[1]="January";
+                Month[2]="February";
+                Month[3]="March";
+                Month[4]="April";
+                Month[5]="May";
+                Month[6]="June";
+                Month[7]="July";
+                Month[8]="August";
+                Month[9]="September";
+                Month[10]="October";
+                Month[11]="November";
+                Month[12]="December";
+                return Month(MonthNumber);
+            }
+        </script>
+	</head>
+    <body>
+        <script>
+            const date = new Date("July 4, 2023");
+            const day = date.getDate();
+            const month = date.getMonth() + 1;
+            const year = date.getFullYear();
+            const today = new Date();
+          
+            const timeDiff = Math.abs(date.getTime() - today.getTime());
+            const diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+          
+            document.write(`<h2>Days till July 4th: ${diffDays} days</h2>`);
+          </script>
+    </body>
+</html>
